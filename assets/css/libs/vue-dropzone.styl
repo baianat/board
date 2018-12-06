@@ -1,0 +1,62 @@
+body
+  .vue-dropzone
+    border: 2px dashed $gray
+    border-radius: $border-radius
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    padding: 7.5px
+    background: $light
+
+    &:hover
+      background: lighten($light, 50%)
+
+    &.dz-drag-hover
+      border-style: dashed
+      border-color: $primary
+
+    .dz-preview
+      padding: 0
+      margin: 0
+      width: 20%
+      border: 7.5px solid transparent
+      background: none !important
+      min-width: 140px
+
+      +mq($until: 1800px)
+        width: 25%
+
+      +mq($until: 1300px)
+        width: calc((100% / 3))
+
+      +mq($until: 500px)
+        width: 50%
+
+      .dz-details
+        background: $primary
+        text-align: center
+
+      .dz-progress
+        .dz-upload
+          background: $success
+
+      .dz-error-message
+        background: $danger
+        border-radius: 0
+
+      .dz-remove
+        margin-right: 15px
+        left: 0
+        right: 0
+        border: 0
+
+      .dz-image, .dz-details
+        border-radius: $border-radius
+
+      .dz-success-mark, .dz-error-mark
+        top: 0
+
+        svg
+          width: 24px
+          height: 240px

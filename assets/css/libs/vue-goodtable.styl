@@ -1,0 +1,111 @@
+
+// DataTable
+.table
+  th
+    &.sorting
+      position: relative
+
+      &:after, &:before
+        position: absolute
+        {$dir-end}: 10px
+        top: calc(50% - 3.5px)
+        width: 7.5px
+        height: 2px
+        content: ''
+        display: block
+        background: $primary
+        transition: transform 0.2s ease-in-out
+
+      &:after
+        transform: rotate(-45deg)
+        margin-{$dir-end}: 4px
+
+      &:before
+        transform: rotate(45deg)
+
+    &.sorting-desc
+      &:after
+        transform: rotate(45deg)
+
+      &:before
+        transform: rotate(-45deg)
+
+  .vgt-right-align
+    text-align: $dir-start
+
+  .vgt-left-align
+    text-align: $dir-start
+
+.vgt-wrap
+  &.rtl
+    .vgt-right-align
+      text-align: right
+
+    .vgt-left-align
+      text-align: right
+
+    .table
+      th
+        &.sorting
+          &:after, &:before
+            right: auto
+            left: 10px
+
+          &:after
+            margin-right: 0
+            margin-left: 4px
+
+body
+  .vgt
+    &-global
+      &-search
+        background: none
+        border: 0
+
+        &__input
+          padding: 0
+
+          .input__icon
+            display: none
+
+    &-input, &-select
+      border-color: $gray
+
+      &:focus
+        border-color: $black
+
+    &-selection
+      &-info
+        &-row
+          background: $light
+          color: $black
+          border: none
+          font-weight: $font-weight-bold
+
+          >a
+            color: $danger
+
+    &-fixed-header
+      background: $white
+
+    &-wrap
+      &__footer
+        border: none
+        background: none
+
+        .footer
+          &__navigation
+            &__page
+              &-btn
+                color: $black
+
+                .chevron.left:after
+                  border-right-color: $primary
+
+                .chevron.right:after
+                  border-left-color: $primary
+
+            &__row
+              &-count
+                &__label
+                  color: $slategray

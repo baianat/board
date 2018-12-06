@@ -1,0 +1,179 @@
+@import './util'
+@import './widgets'
+@import './libs/**'
+
+a
+  color: inherit
+
+html, body, input, button, textarea
+  font-family: $fontFamily
+
+// Page Animation
+.page-enter-active, .page-leave-active
+  transition: opacity 0.5s
+
+.page-enter, .page-leave-active
+  opacity: 0
+
+// fade Animation
+.fade-enter-active, .fade-leave-active
+  transition: opacity 0.5s
+
+.fade-enter, .fade-leave-active
+  opacity: 0
+
+.nav
+  padding: 0
+
+  &-menu
+    >.nav-item
+      >a, .nav-toggle
+        font-weight: $font-weight-bold
+
+  &-icon
+    &:before, &:after
+      background: $slategray
+
+.nav-link, .nav-toggle
+  display: flex
+  align-items: center
+  font-weight: $font-weight-medium
+  padding-top: 1em
+  padding-bottom: 1em
+
+.nav-link .icon, .nav-toggle .icon
+  font-size: 24px
+
+.nav-submenu
+  padding: 0.75em
+  padding-{$dir-start}: 40px
+
+.dropdown
+  &:not(:last-child)
+    margin-{$dir-end}: 0.5em
+
+code
+  padding: 0.2rem 0.4rem
+  background: $gray
+
+.select
+  color: $black
+
+.checkbox-label, .radio-label
+  line-height: 1
+
+.grid
+  &.is-tiny
+    margin-{$dir-end}: -8px
+    margin-{$dir-start}: -8px
+
+    .column
+      padding-{$dir-end}: 8px
+      padding-{$dir-start}: 8px
+
+  &.has-space
+    >.column
+      padding-top: $gutter
+      padding-bottom: $gutter
+
+  &.has-separator
+    &-widescreen
+      >.column
+        &:not(:last-child)
+          border-bottom: 1px solid $light
+
+      +mq($from: 'widescreen')
+        >.column
+          &:not(:last-child)
+            border-{$dir-end}: 1px solid $light
+            border-bottom: 0
+
+.table
+  thead
+    th
+      border-width: 0
+      font-size: $size-massive
+
+  &.is-clean
+    thead
+      th
+        border-width: 1px
+
+.avatar
+  vertical-align: top
+  border-radius: 20em
+  display: inline-block
+
+  &.is-inline
+    margin-{$dir-end}: 1em
+    display: inline-block
+
+  &-initials
+    width: 100%
+    height: 100%
+
+  .icon
+    margin: auto
+    fill: $white
+    font-size: 1.6em
+
+  &.is-massive
+    .icon
+      font-size: 1.8em
+
+  &.is-large
+    .icon
+      font-size: 1.7em
+
+  &.is-small
+    .icon
+      font-size: 1.5em
+
+  &.is-tiny
+    .icon
+      font-size: 1.4em
+
+  &.is-square
+    border-radius: 4px
+
+    img, .avatar-initials
+      border-radius: 4px
+
+  for color in $modifiers-color
+    $accent = lookup('$' + color)
+    $text = isLight(color) ? $black : $white
+
+    &.is-{color}
+      .icon
+        fill: $text
+
+      .avatar-initials
+        background: $accent
+        color: $text
+
+.label
+  border-radius: ($border-radius / 2)
+
+.alert
+  border-radius: $border-radius
+  generateSizes()
+
+  &.is-rounded
+    border-radius: 2em
+
+  &-title
+    font-weight: $font-weight-bold
+
+.breadcrumb
+  &-item
+    &:not(:first-child)
+      &:before
+        content: '/'
+        display: inline-flex
+        padding: 0 0.5em
+
+      &[data-divider]
+        &:before
+          content: attr(data-divider)
+
+@import './rtl'

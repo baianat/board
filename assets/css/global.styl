@@ -1,0 +1,300 @@
+@import './vars'
+@import '~@blexar/framework/src/util/_index'
+
+/**
+ * return the reponsive values
+ * this is the core function in base framework
+ * it's just a liner equation that calculates the value
+ * based on the current viewport width
+ * y = mx + c
+ * y: font size
+ * x: viewport width
+ * m: how may font is grow for each pixel (slop)
+ * c: iniatal value before any adding
+ */
+unitRes(min, max, screen-min = 320, screen-max = 2560)
+  $slope = ((max - min) / (screen-max - screen-min))
+  $init = min - screen-min * $slope
+  'calc( %s + %s )' % (unit($slope * 100, 'vw') unit($init, 'px'))
+
+/*
+ * @font-face Mixin
+ */
+fontFace(font-name, font-src, font-weight = false, font-style = false, formats = eot woff2 woff truetype svg, local-font-name = font-name, svg-font-name = font-name)
+  @font-face
+    fonts = ()
+    font-family: font-name
+
+    if (local)
+      local-name = local-font-name ? local-font-name : font-name
+      push(fonts, 'local("' + local-name + '")')
+
+    if (eot in formats)
+      push(fonts, 'url("' + font-src + '.eot?iefix") format("emebedded-opentype")')
+
+    if (woff2 in formats)
+      push(fonts, 'url("' + font-src + '.woff2") format("woff2")')
+
+    if (woff in formats)
+      push(fonts, 'url("' + font-src + '.woff") format("woff")')
+
+    if (opentype in formats || (otf in formats))
+      push(fonts, 'url("' + font-src + '.otf") format("opentype")')
+
+    if (truetype in formats || (ttf in formats))
+      push(fonts, 'url("' + font-src + '.ttf") format("truetype")')
+
+    if (svg in formats)
+      svg-name = svg-font-name ? svg-font-name : font-name
+      push(fonts, 'url("' + font-src + '.svg#' + svg-name + '") format("svg")')
+
+    src: unquote(join(', ', fonts))
+
+    if (font-weight)
+      font-weight: font-weight
+
+    if (font-style)
+      font-style: font-style
+
+/*
+ * Parent Selector
+ */
+parent()
+  {selector('\^[-1]')}
+    {block}
+
+/*
+ * Placeholder Mixin
+ */
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+
+  &:-moz-placeholder
+    {block}
+
+  &::-moz-placeholder
+    {block}
+
+  &:-ms-input-placeholder
+    {block}
+
+/*
+ * Selection Mixin
+ */
+selection()
+  &::selection
+    {block}
+
+  &::-moz-selection
+    {block}
+
+user-select(select)
+  -webkit-user-select: select
+  -khtml-user-drag: select
+  -khtml-user-select: select
+  -moz-user-select: select
+
+  if (select == none)
+    -moz-user-select: -moz-none
+
+  -ms-user-select: select
+  user-select: select
+
+/*
+
+   Usage: {shorthand for rule}{shorthand for direction}{integer-index}
+
+   {shorthand for rule}
+   p - padding
+   m - margin
+
+   {shorthand for direction}
+   t - top
+   r - right
+   b - bottom
+   l - left
+   v - vertical
+   h - horizontal
+   a - all
+
+   {integer-index}
+   [1-8]
+
+*/
+t(rule, size, u)
+  {rule}-top: (u ? unit(size, u) : size)
+
+r(rule, size, u)
+  {rule}-right: (u ? unit(size, u) : size)
+
+b(rule, size, u)
+  {rule}-bottom: (u ? unit(size, u) : size)
+
+l(rule, size, u)
+  {rule}-left: (u ? unit(size, u) : size)
+
+v(rule, size, u)
+  t(rule, size, u)
+  b(rule, size, u)
+
+h(rule, size, u)
+  r(rule, size, u)
+  l(rule, size, u)
+
+a(rule, size, u)
+  {rule}: (u ? unit(size, u) : size)
+
+spacing(base, numSizes)
+  for n in a v h t r b l
+    for m in 0 .. numSizes
+      .u-p{n}{m}
+        n(padding, (m * base), 'px')
+
+      .u-m{n}{m}
+        n(margin, (m * base), 'px')
+
+    .u-m{n}a
+      n(margin, auto, false)
+
+/*
+ * Media queries Mixin
+ * https://github.com/ardentic/stylus-mq
+ */
+$mq-base-font-size ?= 16px
+// 
+// Allows you to create a separate stylesheet for older browsers that
+// don't support media queries.
+// 
+$mq-responsive ?= true
+// 
+// Default named breakpoints.
+// 
+$mq-breakpoints ?= {
+  tiny: 480px,
+  small: 768px,
+  medium: 992px,
+  large: 1200px
+}
+// 
+// Static breakpoint to use when $mq-responsive is set to false.
+// 
+$mq-static-breakpoint ?= 'desktop'
+// 
+// List of breakpoints to show in the top right corner of the browser.
+// 
+$mq-show-breakpoints ?= ()
+
+// 
+// Convert pixels to ems
+// 
+mq-px2em($value)
+  if (unit($value) == 'em')
+    return $value
+
+  return unit(($value / $mq-base-font-size), 'em')
+
+// 
+// Get named breakpoint width
+// 
+mq-get-breakpoint-width($name)
+  unless ($name in $mq-breakpoints)
+    warn('Breakpoint ' + $name + ' does not exist')
+
+  return $mq-breakpoints[$name]
+
+mq($from = false, $until = false, $and = false, $media-type = 'all')
+  $min-width = 0
+  $max-width = 0
+  $media-query = s($media-type)
+
+  // From: this breakpoint (inclusive)
+  if ($from)
+    if (type($from) == 'unit')
+      $min-width = mq-px2em($from)
+    else
+      $min-width = mq-px2em(mq-get-breakpoint-width($from))
+
+  // Until: that breakpoint (exclusive)
+  if ($until)
+    if (type($until) == 'unit')
+      $max-width = mq-px2em($until)
+    else
+      $max-width = mq-px2em(mq-get-breakpoint-width($until)) - 0.01em
+
+  // Responsive support is disabled, rasterize the output outside @media blocks
+  // The browser will rely on the cascade itself.
+  if (!$mq-responsive)
+    $static-breakpoint-width = mq-get-breakpoint-width($mq-static-breakpoint)
+
+    if ($static-breakpoint-width)
+      $target-width = mq-px2em($static-breakpoint-width)
+
+      if (!$and && ($min-width <= $target-width) && !$until || ($max-width >= $target-width))
+        {block}
+  else
+    if ($min-width != 0)
+      $media-query = s('%s and (min-width: %s)', $media-query, $min-width)
+
+    if ($max-width != 0)
+      $media-query = s('%s and (max-width: %s)', $media-query, $max-width)
+
+    if ($and)
+      $media-query = s('%s and %s', $media-query, unquote($and))
+
+    @media $media-query
+      {block}
+
+// 
+// Add a breakpoint
+// 
+mq-add-breakpoint($name, $width)
+  $new-breakpoint = {}
+  $new-breakpoint[$name] = $width
+  return merge($mq-breakpoints, $new-breakpoint)
+
+// 
+// Output breakpoints as json
+// 
+mq-breakpoints-to-json()
+  $json = ()
+
+  for $key in $mq-breakpoints
+    push($json, s('"%s": ', unquote($key)))
+
+  for $value, $index in values($mq-breakpoints)
+    $json[$index] = $json[$index] + s('"%s"', mq-px2em($value))
+
+  return '{ ' + join(', ', $json) + ' }'
+
+// 
+// Show the active breakpoint in the top right corner of the viewport
+// 
+if ($mq-show-breakpoints)
+  body:before
+    background-color: #fcf8e3
+    border-bottom: 1px solid #fbeed5
+    border-left: 1px solid #fbeed5
+    color: #c09853
+    font-family: 'Helvetica Neue', sans-serif
+    font-size: 12px
+    padding: 3px 6px
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 100
+
+    // Loop through the breakpoints that should be shown
+    for $show-breakpoint in $mq-show-breakpoints
+      $width = mq-get-breakpoint-width($show-breakpoint)
+
+      +mq($until: $show-breakpoint)
+        content: s('"%s ≤ %s (%s)"', unquote($show-breakpoint), $width, mq-px2em($width))
+
+$mq-breakpoints = {
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 991px,
+  widescreen: 1360px,
+  ultrawide: 1920px
+}

@@ -1,0 +1,29 @@
+
+if ($dir == rtl)
+  html, body, input, button, textarea
+    font-family: 'Markazi Text', serif
+
+  // Blexar
+
+  // libs
+  .apexcharts-canvas
+    direction: ltr
+
+  .ql-editor
+    text-align: right
+
+  // MultiSelect
+  body
+    .multiselect
+      text-align: right
+
+      &__option
+        &:after
+          right: auto
+          left: 0
+
+      &__select
+        right: auto
+
+      &__tags
+        padding: 8px 8px 0 40px

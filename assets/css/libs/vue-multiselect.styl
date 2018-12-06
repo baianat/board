@@ -1,0 +1,121 @@
+body
+  .multiselect
+    color: $black
+    font-size: $size-normal
+
+    &__option
+      &--disabled
+        background: $gray !important
+
+      &--highlight
+        background: $green
+
+        &:after
+          background: rgba(0, 0, 0, 0.1)
+
+      &--selected
+        background: $light
+        font-weight: $font-weight-bold
+
+        &.multiselect
+          &__option
+            &--highlight
+              background: $danger
+
+              &:after
+                background: rgba(0, 0, 0, 0.1)
+
+    &__input
+      font-size: $size-normal
+
+    &__single
+      font-size: $size-normal
+
+    &__content
+      &-wrapper
+        border-color: $gray
+
+    &__placeholder
+      margin-bottom: 5px
+
+    &-above
+      .multiselect
+        &__content
+          &-wrapper
+            border-top-color: $gray
+
+    &__tags
+      border-color: $gray
+      border-radius: $border-radius
+
+    &__tag
+      background: $dark
+
+      &-icon
+        opacity: 0.7
+
+        &:after
+          color: $white
+
+        &:hover
+          background: none
+          opacity: 1
+
+    &__select
+      width: 15px
+      height: 15px
+      position: absolute
+      {$dir-end}: 10px
+      top: 50%
+      transform: translateY(-50%)
+      display: flex
+      align-items: center
+      margin: 0
+      padding: 0
+
+      &:before, &:after
+        width: 7.5px
+        height: 2px
+        content: ''
+        display: block
+        background: $black
+        transition: transform 0.2s ease-in-out
+        border: 0
+        margin: 0
+        position: static
+
+      &:after
+        transform: rotate(-45deg)
+        margin-{$dir-start}: -1.75px
+
+      &:before
+        transform: rotate(45deg)
+        margin-{$dir-end}: -1.75px
+
+    &--active
+      .multiselect
+        &__select
+          transform: translateY(-50%)
+
+          &:after
+            transform: rotate(45deg)
+
+          &:before
+            transform: rotate(-45deg)
+
+    &--disabled
+      .multiselect
+        &__tags
+          background: $gray
+
+        &__select
+          background: none
+
+  .option
+    &__image, &__desc
+      display: inline-block
+      vertical-align: middle
+
+    &__image
+      width: 80px
+      margin-{$dir-end}: 10px

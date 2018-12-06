@@ -1,0 +1,59 @@
+body
+  .flatpickr
+    &-calendar
+      box-shadow: none
+      border: $border solid $gray
+      overflow: hidden
+      border-radius: $border-radius
+
+      &.showTimeInput.hasTime .flatpickr-time
+        border-top: 0
+
+    &-current
+      &-month
+        font-size: 16px
+
+    &-day
+      color: $black
+      border-radius: $border-radius
+
+      &.today
+        border-color: $gray
+
+      &.nextMonthDay, &.prevMonthDay, &.disabled, &.disabled:hover, &.notAllowed, &.notAllowed.nextMonthDay, &.notAllowed.prevMonthDay
+        color: $gray
+
+      &.inRange, &.prevMonthDay.inRange, &.nextMonthDay.inRange, &.today.inRange, &.prevMonthDay.today.inRange, &.nextMonthDay.today.inRange, &:hover, &.prevMonthDay:hover, &.nextMonthDay:hover, &:focus, &.prevMonthDay:focus, &.nextMonthDay:focus
+        background: $light
+        border-color: $light
+
+      &.selected, &.startRange, &.endRange, &.selected.inRange, &.startRange.inRange, &.endRange.inRange, &.selected:focus, &.startRange:focus, &.endRange:focus, &.selected:hover, &.startRange:hover, &.endRange:hover, &.selected.prevMonthDay, &.startRange.prevMonthDay, &.endRange.prevMonthDay, &.selected.nextMonthDay, &.startRange.nextMonthDay, &.endRange.nextMonthDay
+        background: $primary
+        border-color: $primary
+
+      &.inRange
+        box-shadow: -5px 0 0 $light, 5px 0 0 $light
+
+    &-months
+      .flatpickr-prev-month:hover svg, .flatpickr-next-month:hover svg
+        fill: $primary
+
+    &-time
+      input, .flatpickr-am-pm
+        &:hover, &:focus
+          background: $light
+
+      .numInputWrapper
+        &:hover
+          background: $light
+
+        span
+          border: 0
+          border-right: 1px solid $gray
+          border-left: 1px solid $gray
+
+          &:hover
+            background: $gray
+
+  span.flatpickr-weekday
+    color: $dark
