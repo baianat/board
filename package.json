@@ -13,7 +13,7 @@
     "precommit": "npm run lint",
     "build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy": "npm run generate:gh-pages && push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "npm run generate:gh-pages --modern && push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@blexar/framework": "0.0.31",
