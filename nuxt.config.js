@@ -63,10 +63,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    publicPath: '/board/',
+
     /*
     ** You can extend webpack config here
     */
-
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
