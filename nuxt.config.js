@@ -66,8 +66,6 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    publicPath:
-      process.env.DEPLOY_ENV === 'GH_PAGES' ? '/board/_nuxt/' : '/_nuxt/',
 
     extend(config, ctx) {
       // Run ESLint on save
