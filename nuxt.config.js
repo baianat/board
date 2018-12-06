@@ -1,9 +1,7 @@
-const pkg = require('./package')
-const resolve = require('path').resolve
-
 module.exports = {
   mode: 'universal',
   router: {
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/board/' : '/',
     linkExactActiveClass: 'is-active'
   },
   /*
