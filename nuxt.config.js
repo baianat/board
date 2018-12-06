@@ -63,7 +63,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    publicPath: '/board/',
+    publicPath: '/assets/',
 
     /*
     ** You can extend webpack config here
