@@ -1,10 +1,11 @@
 # board
 
-> vue admin panel
+> A complete admin board template with more than 100 elements and components, based on blexar CSS framework.
+> Made with Vue & Nuxt
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
