@@ -22,7 +22,7 @@ div
         VueApexCharts(type="area" height="200"  :options="spark6.options"  :series="spark6.series")
 
   AppCard.u-mt-tiny
-    .grid.is-widescreen-4.is-large.has-space
+    .grid.is-widescreen-4
       .column
         .AppWidget1
           .AppWidget1-item
