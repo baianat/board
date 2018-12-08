@@ -173,8 +173,7 @@ export default {
           { title: 'Sign up', href: '/pages/signup' },
           { title: 'Sign up', href: '/pages/signup2' },
           { title: 'Chat', href: '/pages/chat' },
-          { title: 'New post', href: '/pages/new-post' },
-          { title: 'Users', href: '/pages/users' }
+          { title: 'New post', href: '/pages/new-post' }
         ]
       },
 
