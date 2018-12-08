@@ -1,5 +1,5 @@
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
   router: {
     base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/board/' : '/',
     linkExactActiveClass: 'is-active'
