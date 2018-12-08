@@ -111,7 +111,7 @@ div
               a.dropdown-item(href='#0') Dismes
           .u-text-center
             figure.avatar
-              img(src="/users/2.jpg", alt='avatar')
+              img(src="users/2.jpg", alt='avatar')
             h5.u-mt-small Anna Dan
             p Pellentesque gravida nulla quis molestie molestie. Nulla porttitor augue sit amet semper aliquet. Vivamus dolor enim, pulvinar non urna ac, auctor sollicitudin tellus. Integer facilisis vel tortor tempus mollis. Pellentesque ullamcorper sem in enim placerat efficitur. Aenean scelerisque tempus felis, ut vulputate felis consectetur vel.
       .column.is-widescreen-4.is-desktop-6

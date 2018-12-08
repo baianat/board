@@ -7,7 +7,7 @@ div
         template(slot="header")
           h4.AppCard-title Basic
         figure.avatar.is-inline
-          img(src='/users/1.jpg', alt='avatar')
+          img(src='users/1.jpg', alt='avatar')
         figure.avatar.is-inline
           span.avatar-initials AV
 
@@ -19,7 +19,7 @@ div
           .column
             .u-mb-normal(v-for="(size, idx) in sizes" )
               figure.avatar(:class="size")
-                img(:src='`/users/${idx+1}.jpg`', alt='avatar')
+                img(:src='`users/${idx+1}.jpg`', alt='avatar')
           .column
             .u-mb-normal(v-for="size in sizes")
               figure.avatar( :class="size")
@@ -36,19 +36,19 @@ div
         template(slot="header")
           h4.AppCard-title Status
         figure.avatar.is-inline.is-massive
-          img(src='/users/1.jpg', alt='avatar')
+          img(src='users/1.jpg', alt='avatar')
           span.avatar-icon.is-primary
         figure.avatar.is-inline.is-large
-          img(src='/users/2.jpg', alt='avatar')
+          img(src='users/2.jpg', alt='avatar')
           span.avatar-icon.is-secondary
         figure.avatar.is-inline.is-normal
-          img(src='/users/3.jpg', alt='avatar')
+          img(src='users/3.jpg', alt='avatar')
           span.avatar-icon.is-success
         figure.avatar.is-inline.is-small
-          img(src='/users/4.jpg', alt='avatar')
+          img(src='users/4.jpg', alt='avatar')
           span.avatar-icon.is-danger
         figure.avatar.is-inline.is-tiny
-          img(src='/users/5.jpg', alt='avatar')
+          img(src='users/5.jpg', alt='avatar')
           span.avatar-icon.is-warning
 
     .column
@@ -72,7 +72,7 @@ div
             span.avatar-initials AV
         .u-mt-large
           figure.avatar.is-inline.is-square( v-for="size,idx in sizes" :class="size")
-            img(:src='`/users/${idx+1}.jpg`', alt='avatar')
+            img(:src='`users/${idx+1}.jpg`', alt='avatar')
           figure.avatar.is-inline.is-square( v-for="size in sizes" :class="size")
             span.avatar-initials: AppIcon(name="crop")
 </template>
