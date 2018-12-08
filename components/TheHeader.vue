@@ -11,7 +11,7 @@
       button.button.is-tiny.is-dark.is-wide.u-mt-small View all
     AppDropdown.is-right
       figure.avatar.is-tiny(slot="trigger" )
-        img(src='/users/1.jpg', alt='avatar')
+        img(src='users/1.jpg', alt='avatar')
       a.dropdown-item(href='#0') Profile
       a.dropdown-item(href='#0') Messages
       a.dropdown-item(href='#0') Logout

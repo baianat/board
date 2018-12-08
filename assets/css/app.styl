@@ -8,6 +8,9 @@ a
 html, body, input, button, textarea
   font-family: $fontFamily
 
+p
+  margin: 0
+
 // Page Animation
 .page-enter-active, .page-leave-active
   transition: opacity 0.5s
@@ -43,6 +46,7 @@ html, body, input, button, textarea
 
 .nav-link .icon, .nav-toggle .icon
   font-size: 24px
+  flex: 0 0 24px
 
 .nav-submenu
   padding: 0.75em
@@ -55,6 +59,9 @@ html, body, input, button, textarea
 code
   padding: 0.2rem 0.4rem
   background: $gray
+
+.field-text
+  color: $slategray
 
 .select
   color: $black
@@ -93,6 +100,9 @@ code
     th
       border-width: 0
       font-size: $size-massive
+
+  th
+    border-width: 0
 
   &.is-clean
     thead

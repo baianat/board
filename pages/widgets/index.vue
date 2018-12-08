@@ -22,7 +22,7 @@ div
         VueApexCharts(type="area" height="200"  :options="spark6.options"  :series="spark6.series")
 
   AppCard.u-mt-tiny
-    .grid.is-widescreen-4.is-large.has-space
+    .grid.is-widescreen-4
       .column
         .AppWidget1
           .AppWidget1-item
@@ -261,7 +261,7 @@ div
             a.dropdown-item(href='#0') Dismes
         .u-text-center
           figure.avatar
-            img(src="/users/2.jpg", alt='avatar')
+            img(src="users/2.jpg", alt='avatar')
           h5.u-mt-small Anna Dan
           p Pellentesque gravida nulla quis molestie molestie. Nulla porttitor augue sit amet semper aliquet. Vivamus dolor enim, pulvinar non urna ac, auctor sollicitudin tellus. Integer facilisis vel tortor tempus mollis. Pellentesque ullamcorper sem in enim placerat efficitur. Aenean scelerisque tempus felis, ut vulputate felis consectetur vel.
     .column
@@ -561,7 +561,6 @@ export default {
         options: {
           chart: {
             id: 'sparkline4',
-            group: 'sparklines',
             type: 'area',
             height: 160,
             sparkline: {
@@ -595,7 +594,6 @@ export default {
         options: {
           chart: {
             id: 'sparkline5',
-            group: 'sparklines',
             type: 'area',
             height: 160,
             sparkline: {
@@ -629,7 +627,6 @@ export default {
         options: {
           chart: {
             id: 'sparkline6',
-            group: 'sparklines',
             type: 'area',
             height: 160,
             sparkline: {
