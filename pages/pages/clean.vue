@@ -180,7 +180,6 @@ export default {
         options: {
           chart: {
             id: 'sparkline4',
-            group: 'sparklines',
             type: 'area',
             height: 160,
             sparkline: {
@@ -214,7 +213,6 @@ export default {
         options: {
           chart: {
             id: 'sparkline5',
-            group: 'sparklines',
             type: 'area',
             height: 160,
             sparkline: {
@@ -248,7 +246,6 @@ export default {
         options: {
           chart: {
             id: 'sparkline6',
-            group: 'sparklines',
             type: 'area',
             height: 160,
             sparkline: {
