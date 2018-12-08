@@ -31,6 +31,9 @@
   &-body
     padding: 0 30px 30px
 
+    &:first-child
+      padding: 30px
+
   &.is-fit-body
     .AppCard-body
       padding: 0
@@ -40,7 +43,7 @@
     margin-right: -30px
 
   &-footer
-    padding: 30px 30px
+    padding: 0 30px 30px
     flex-wrap: wrap
     display: flex
     align-items: center
