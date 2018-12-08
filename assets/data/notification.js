@@ -51,22 +51,22 @@ const notificationIconsState = [
 const notificationThumbs = [
   {
     title: 'New user registered',
-    thumb: 'users/1.jpg',
+    thumb: 'https://randomuser.me/api/portraits/women/67.jpg',
     time: 'Just now'
   },
   {
     title: 'New order received',
-    thumb: 'users/2.jpg',
+    thumb: 'https://randomuser.me/api/portraits/men/81.jpg',
     time: '2 min ago'
   },
   {
     title: 'New payment made',
-    thumb: 'users/3.jpg',
+    thumb: 'https://randomuser.me/api/portraits/women/72.jpg',
     time: '24 min ago'
   },
   {
     title: 'New message from Michael',
-    thumb: 'users/4.jpg',
+    thumb: 'https://randomuser.me/api/portraits/men/60.jpg',
     time: '1 hour ago'
   }
 ]
@@ -74,25 +74,25 @@ const notificationThumbsState = [
   {
     title: 'New user registered',
     state: 'is-primary',
-    thumb: 'users/1.jpg',
+    thumb: 'https://randomuser.me/api/portraits/women/68.jpg',
     time: 'Just now'
   },
   {
     title: 'New order received',
     state: 'is-warning',
-    thumb: 'users/2.jpg',
+    thumb: 'https://randomuser.me/api/portraits/men/62.jpg',
     time: '2 min ago'
   },
   {
     title: 'New payment made',
     state: 'is-success',
-    thumb: 'users/3.jpg',
+    thumb: 'https://randomuser.me/api/portraits/women/76.jpg',
     time: '24 min ago'
   },
   {
     title: 'New message from Michael',
     state: 'is-danger',
-    thumb: 'users/4.jpg',
+    thumb: 'https://randomuser.me/api/portraits/men/40.jpg',
     time: '1 hour ago'
   }
 ]

@@ -6,7 +6,7 @@ const Items = [
     username: 'Dessie79',
     jobTitle: 'Web Developer',
     phone: '1-360-812-9380 x511',
-    avatar: 'users/2.jpg',
+    avatar: 'https://randomuser.me/api/portraits/women/67.jpg',
     address: {
       street: '655 Archibald Groves',
       suite: 'Apt. 818',
@@ -27,7 +27,7 @@ const Items = [
     email: 'Jakayla_Crooks867@yahoo.com',
     username: 'Jakayla_Crooks86',
     phone: '610.499.1240',
-    avatar: 'users/3.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/81.jpg',
     address: {
       street: '281 Tillman Forge',
       suite: 'Apt. 381',
@@ -48,7 +48,7 @@ const Items = [
     email: 'Hobart_Mueller.Thiel@hotmail.com',
     username: 'Hobart_Mueller',
     phone: '1-590-385-3349',
-    avatar: 'users/1.jpg',
+    avatar: 'https://randomuser.me/api/portraits/women/72.jpg',
     address: {
       street: '706 Padberg Knoll',
       suite: 'Suite 818',
@@ -69,7 +69,7 @@ const Items = [
     email: 'Celestine.Casper59@hotmail.com',
     username: 'Celestine.Casper',
     phone: '1-830-046-3289',
-    avatar: 'users/4.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/60.jpg',
     address: {
       street: '9528 Schroeder Track',
       suite: 'Apt. 443',
@@ -90,7 +90,7 @@ const Items = [
     jobTitle: 'Project Manager',
     username: 'Hortense99',
     phone: '712.916.2569 x0663',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/moscoz/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/9.jpg',
     address: {
       street: '9046 Allen Ferry',
       suite: 'Suite 429',
@@ -111,8 +111,7 @@ const Items = [
     email: 'Pat_Zulauf81.Bartell86@gmail.com',
     username: 'Pat_Zulauf81',
     phone: '(058) 200-7342',
-    avatar:
-      'https://s3.amazonaws.com/uifaces/faces/twitter/rehatkathuria/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
     address: {
       street: '62268 Favian Coves',
       suite: 'Suite 993',
@@ -133,7 +132,7 @@ const Items = [
     email: 'Solon.Bauch4_Rath@hotmail.com',
     username: 'Solon.Bauch4',
     phone: '789-914-4904 x173',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/spacewood_/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/62.jpg',
     address: {
       street: '8153 Favian Walk',
       suite: 'Apt. 495',
@@ -154,7 +153,7 @@ const Items = [
     email: 'Calista_Mertz1757@hotmail.com',
     username: 'Calista_Mertz17',
     phone: '961-703-4134',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/moscoz/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/women/76.jpg',
     address: {
       street: '886 Wendy Circles',
       suite: 'Apt. 933',
@@ -175,7 +174,7 @@ const Items = [
     email: 'Jackeline.Abshire_Dach@yahoo.com',
     username: 'Jackeline.Abshire',
     phone: '(326) 903-5706 x6854',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/larrybolt/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/40.jpg',
     address: {
       street: '416 Cathy Spur',
       suite: 'Apt. 431',
@@ -196,8 +195,7 @@ const Items = [
     email: 'Jamey_Grant_Cruickshank73@gmail.com',
     username: 'Jamey_Grant',
     phone: '545-939-2404 x32373',
-    avatar:
-      'https://s3.amazonaws.com/uifaces/faces/twitter/mikebeecham/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/women/94.jpg',
     address: {
       street: '38372 Mante Glen',
       suite: 'Suite 090',
@@ -218,7 +216,7 @@ const Items = [
     jobTitle: 'Web Developer',
     username: 'Barton85',
     phone: '(979) 560-8322 x174',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/a_harris88/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
     address: {
       street: '185 Florine Spurs',
       suite: 'Suite 178',
@@ -239,7 +237,7 @@ const Items = [
     email: 'Gloria78.Nicolas83@hotmail.com',
     username: 'Gloria78',
     phone: '188.890.3246',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/nehfy/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/women/47.jpg',
     address: {
       street: '643 Arch Mews',
       suite: 'Apt. 171',
@@ -260,7 +258,7 @@ const Items = [
     email: 'Olin.Robel49.Schowalter24@yahoo.com',
     username: 'Olin.Robel49',
     phone: '1-982-234-7756',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/jcubic/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/73.jpg',
     address: {
       street: '0813 Mayer Greens',
       suite: 'Apt. 551',
@@ -281,8 +279,7 @@ const Items = [
     email: 'Rollin43_Fay@yahoo.com',
     username: 'Rollin43',
     phone: '477-651-5715 x502',
-    avatar:
-      'https://s3.amazonaws.com/uifaces/faces/twitter/horaciobella/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/women/46.jpg',
     address: {
       street: '5704 Spinka Causeway',
       suite: 'Suite 388',
@@ -303,7 +300,7 @@ const Items = [
     username: 'Murl_Abshire41',
     jobTitle: 'Web Developer',
     phone: '107-733-1219 x0615',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/stayuber/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/men/42.jpg',
     address: {
       street: '4880 Tanner Circles',
       suite: 'Apt. 994',
@@ -324,7 +321,7 @@ const Items = [
     email: 'Breanna.Bartoletti21@hotmail.com',
     username: 'Breanna.Bartoletti',
     phone: '645.045.0876 x35882',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/flexrs/128.jpg',
+    avatar: 'https://randomuser.me/api/portraits/women/86.jpg',
     address: {
       street: '431 Grimes Common',
       suite: 'Apt. 530',

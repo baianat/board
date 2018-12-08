@@ -19,19 +19,19 @@ div
         .AppChat-current-status.is-online
       .AppChat-messages(ref="AppChatMessages")
         .AppChat-messages-item(title="20-11-2019")
-          .AppChat-messages-item-thumb: img(src="users/2.jpg")
+          .AppChat-messages-item-thumb: img(src="https://randomuser.me/api/portraits/women/67.jpg")
           .AppChat-messages-item-content
             span Hi ,
             span What are doing?
             span Are you here
         .AppChat-messages-item.is-mine(title="20-11-2019")
-          .AppChat-messages-item-thumb: img(src="users/3.jpg")
+          .AppChat-messages-item-thumb: img(src="https://randomuser.me/api/portraits/men/81.jpg")
           .AppChat-messages-item-content
             span Yes
             span I'm here
             span Aliquam felis massa, tristique at semper vel, ultrices eu nulla.
         .AppChat-messages-item(title="20-11-2019")
-          .AppChat-messages-item-thumb: img(src="users/2.jpg")
+          .AppChat-messages-item-thumb: img(src="https://randomuser.me/api/portraits/women/67.jpg")
           .AppChat-messages-item-content
             span Ok Ok
             span In eget rhoncus ante. Nullam ipsum arcu, suscipit ut dolor vitae, ultrices pulvinar ligula. Phasellus semper auctor sem at tristique. Donec ac tortor dapibus, commodo mauris in, suscipit mi.
