@@ -24,6 +24,9 @@
     z-index: 3
     align-items: flex-start
 
+  &-item
+    width: 100%
+
   &.is-right
     .dropdown-menu
       {$dir-start}: auto
