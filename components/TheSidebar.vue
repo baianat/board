@@ -28,7 +28,7 @@
   display: block
   position: fixed
   z-index: 1060
-  top: 60px
+  top: 50px
   {$dir-start}: 0
   bottom: 0
   width: 260px
