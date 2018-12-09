@@ -144,10 +144,10 @@ code
       font-size: 1.4em
 
   &.is-square
-    border-radius: 4px
+    border-radius: $border-radius
 
     img, .avatar-initials
-      border-radius: 4px
+      border-radius: $border-radius
 
   for color in $modifiers-color
     $accent = lookup('$' + color)
