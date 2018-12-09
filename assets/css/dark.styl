@@ -1,8 +1,8 @@
-$box-shadow = 0px 0px 25.5px 4.5px rgba(255, 255, 255, 0.1)
-$box-shadow2 = 0px 0px 25.5px 4.5px rgba(255, 255, 255, 0.2)
+
+$black = #152935
 
 // [dark^='true']
-html
+html[dark^='true']
   body
     background: $black
     color: $white
@@ -27,7 +27,7 @@ html
 
   // AppCard
   .AppCard
-    background: $black
+    background: lighten($black, 2%)
     color: $white
     box-shadow: $box-shadow
 
@@ -40,7 +40,7 @@ html
 
   // AppItem
   .AppItem
-    background: $black
+    background: lighten($black, 2%)
     color: $white
     box-shadow: $box-shadow
 
@@ -59,6 +59,16 @@ html
 
     &.is-hoverable tr:hover
       background: alpha($white, 0.1)
+
+    &.is-bordered
+      border-color: alpha($white, 0.1)
+
+      th:not(:last-child), td:not(:last-child)
+        border-color: alpha($white, 0.1)
+
+    &.is-clean
+      thead th
+        border-color: alpha($white, 0.1)
 
   .vgt-fixed-header
     background: $black
@@ -108,7 +118,7 @@ html
     border-color: alpha($white, 0.1)
 
     a
-      background: $black
+      background: lighten($black, 2%)
 
     &.is-boxed
       .is-active a, a:hover
