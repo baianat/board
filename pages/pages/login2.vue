@@ -7,7 +7,7 @@ div
     label.input-label Password
     input(type="password" class="input")
     button.button.is-block.is-primary Sign in
-    nuxt-link.button.is-block.is-clean(to="/signup") Create Account
+    nuxt-link.button.is-block.is-clean(to="/pages/signup2") Create Account
 
 </template>
 
