@@ -36,7 +36,6 @@
     h1
       font-size: 140px
       margin-bottom: 20px
-      mix-blend-mode: color-dodge
 
       +mq($until: 500px)
         font-size: 60px
