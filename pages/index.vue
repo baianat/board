@@ -93,7 +93,6 @@ div
                       figure.avatar.is-inline.is-tiny
                         img(:src='user.avatar', :alt='user.name')
                       .u-font-bold {{user.name}}
-                  td {{user.address.city}}
                   td #[label.label.is-tiny(:class="colors[Math.floor((Math.random() * 8) + 0)]") {{user.jobTitle}}]
                   td {{user.address.country}}
 
