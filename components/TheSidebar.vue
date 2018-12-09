@@ -168,6 +168,7 @@ export default {
         icon: 'view-quilt',
         items: [
           { title: 'Clean', href: '/pages/clean' },
+          { title: 'Dark', href: '/pages/dark' },
           { title: 'Login', href: '/pages/login' },
           { title: 'Login2', href: '/pages/login2' },
           { title: 'Sign up', href: '/pages/signup' },
