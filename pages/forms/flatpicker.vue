@@ -5,86 +5,89 @@ div
   .grid.has-space
     .column.is-desktop-6
       AppCard.is-full
-
-        div
-          p Date
-          FlatPicker(
-                    id="date-input"
-                    v-model="form.date"
-                    class="input"
-                    placeholder="Select date"
-                  )
-        div
-          p Time
-          FlatPicker(
-                    id="time-input"
-                    v-model="form.time"
-                    :config="configs.timePicker"
-                    class="input"
-                    placeholder="Time"
-                  )
-        div
-          p Date & Time
-          FlatPicker(
-                    id="datetime-input"
-                    v-model="form.datetime"
-                    :config="configs.dateTimePicker"
-                    class="input"
-                    placeholder="Time"
-                  )
-        div
-          p Wrap
-          FlatPicker(
-                    id="wrap-input"
-                    v-model="form.wrap"
-                    :config="configs.wrap"
-                    class="input"
-                    placeholder="Select date"
-                  )
-        .grid.is-6
-          .column
-            p Start date
+        form.form
+          .field
+            label.field-label Date
             FlatPicker(
-                      id="start-input"
-                      v-model="form.start"
-                      :config="configs.start"
+                      id="date-input"
+                      v-model="form.date"
                       class="input"
                       placeholder="Select date"
-                      @on-change="onStartChange"
                     )
-          .column
-            p End date
+          .field
+            label.field-label Time
             FlatPicker(
-                      id="end-input"
-                      v-model="form.end"
-                      :config="configs.end"
+                      id="time-input"
+                      v-model="form.time"
+                      :config="configs.timePicker"
+                      class="input"
+                      placeholder="Time"
+                    )
+          .field
+            label.field-label Date & Time
+            FlatPicker(
+                      id="datetime-input"
+                      v-model="form.datetime"
+                      :config="configs.dateTimePicker"
+                      class="input"
+                      placeholder="Time"
+                    )
+          .field
+            label.field-label Wrap
+            FlatPicker(
+                      id="wrap-input"
+                      v-model="form.wrap"
+                      :config="configs.wrap"
                       class="input"
                       placeholder="Select date"
-                      @on-change="onEndChange"
                     )
+          .grid.is-6
+            .column
+              .field
+                label.field-label  Start date
+                FlatPicker(
+                          id="start-input"
+                          v-model="form.start"
+                          :config="configs.start"
+                          class="input"
+                          placeholder="Select date"
+                          @on-change="onStartChange"
+                        )
+            .column
+              .field
+                label.field-label  End date
+                FlatPicker(
+                          id="end-input"
+                          v-model="form.end"
+                          :config="configs.end"
+                          class="input"
+                          placeholder="Select date"
+                          @on-change="onEndChange"
+                        )
 
     .column.is-desktop-6
       AppCard.is-full
-        div
-          p Inline
-          FlatPicker(
-                    id="inline-input"
-                    v-model="form.inline"
-                    :config="configs.inline"
-                    class="input"
-                    placeholder="Select date"
-                  )
+        form.form
+          .field
+            label.field-label Inline
+            FlatPicker(
+                      id="inline-input"
+                      v-model="form.inline"
+                      :config="configs.inline"
+                      class="input"
+                      placeholder="Select date"
+                    )
 
-        div
-          p Range date
-          FlatPicker(
-                    id="range-input"
-                    v-model="form.range"
-                    :config="configs.range"
-                    class="input"
-                    placeholder="Select date"
+          .field
+            label.field-label Range date
+            FlatPicker(
+                      id="range-input"
+                      v-model="form.range"
+                      :config="configs.range"
+                      class="input"
+                      placeholder="Select date"
 
-                  )
+                    )
 
 
 </template>
