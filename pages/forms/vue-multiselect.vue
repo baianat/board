@@ -73,44 +73,49 @@ div
       AppCard.is-full
         template(slot="header")
           h4.AppCard-title Multiple
-        p Multiple
-        Multiselect(
-          v-model="multiple",
-          :options="object_options",
-          :multiple="true",
-          :clear-on-select="false",
-          :close-on-select="false",
-          track-by="name",
-          label="name",
-          placeholder="Select one",
-          :allow-empty="false",
-        )
-        p Limit
-        Multiselect(
-          v-model="limit",
-          :options="object_options",
-          :multiple="true",
-          :max=2,
-          :clear-on-select="false",
-          :close-on-select="false",
-          track-by="name",
-          label="name",
-          placeholder="Select one",
-          :allow-empty="false",
-        )
-        p Tagging
-        Multiselect(
-          v-model="tag",
-          :options="object_options",
-          :multiple="true",
-          :taggable="true",
-          @tag="addTag",
-          :clear-on-select="false",
-          :close-on-select="false",
-          track-by="name",
-          label="name",
-          placeholder="Type new tag",
-        )
+        form.form
+          .field
+            label.field-label Multiple
+
+            Multiselect(
+              v-model="multiple",
+              :options="object_options",
+              :multiple="true",
+              :clear-on-select="false",
+              :close-on-select="false",
+              track-by="name",
+              label="name",
+              placeholder="Select one",
+              :allow-empty="false",
+            )
+          .field
+            label.field-label Limit
+            Multiselect(
+              v-model="limit",
+              :options="object_options",
+              :multiple="true",
+              :max=2,
+              :clear-on-select="false",
+              :close-on-select="false",
+              track-by="name",
+              label="name",
+              placeholder="Select one",
+              :allow-empty="false",
+            )
+          .field
+            label.field-label Tagging
+            Multiselect(
+              v-model="tag",
+              :options="object_options",
+              :multiple="true",
+              :taggable="true",
+              @tag="addTag",
+              :clear-on-select="false",
+              :close-on-select="false",
+              track-by="name",
+              label="name",
+              placeholder="Type new tag",
+            )
 
 </template>
 
