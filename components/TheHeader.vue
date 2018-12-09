@@ -4,20 +4,23 @@
     nuxt-link(to="/"): AppIcon(name="logo")
 
 
-  .TheHeader-actions
-    .TheHeader-icon
+  ul.TheHeader-actions
+    li.TheHeader-icon
       a(href="https://github.com/baianat/board" target="blank"): AppIcon(name="github")
-    AppDropdown.is-large.is-right
-      AppIcon(name="notifications" slot="trigger" type="outlined")
-      AppList(:items="notificationIcons")
-      button.button.is-tiny.is-dark.is-wide.u-mt-small View all
-    AppDropdown.is-right
-      figure.avatar.is-tiny(slot="trigger" )
-        img(src='https://randomuser.me/api/portraits/men/81.jpg', alt='avatar')
-      a.dropdown-item(href='#0') Profile
-      a.dropdown-item(href='#0') Messages
-      a.dropdown-item(href='#0') Logout
-    .TheHeader-icon.is-sidebar(@click.prevent="$emit('sidebar')")
+    li
+      AppDropdown.is-large.is-right
+        AppIcon(name="notifications" slot="trigger" type="outlined")
+        AppList(:items="notificationIcons")
+        button.button.is-tiny.is-dark.is-wide.u-mt-small View all
+    li
+      AppDropdown.is-right
+        figure.avatar.is-tiny(slot="trigger" )
+          img(src='https://randomuser.me/api/portraits/men/81.jpg', alt='avatar')
+        a.dropdown-item(href='#0') Profile
+        a.dropdown-item(href='#0') Messages
+        a.dropdown-item(href='#0') Logout
+
+    li.TheHeader-icon.is-sidebar(@click.prevent="$emit('sidebar')")
       AppIcon(name="menu")
 
 </template>
@@ -72,6 +75,8 @@
     display: flex
     align-items: center
     margin: 0 -10px
+    padding: 0
+    list-style-type: none
 
     .dropdown
       margin: 0 !important
@@ -86,7 +91,7 @@
         fill: $white
         font-size: 24px
 
-    >div, >a
+    >div, >li
       padding: 0 10px
       margin: 0
 </style>
