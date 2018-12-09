@@ -275,14 +275,6 @@ div
             AppIcon(name="align-right")
             span align right
 
-    .column
-      AppCard.is-full
-        template(slot="header")
-          h4.AppCard-title  Block
-
-        button.button.is-block.is-primary .is-block
-        button.button.is-block.is-outlined.is-secondary .is-block
-        button.button.is-block.is-gradient.is-danger .is-block
 
 </template>
 
