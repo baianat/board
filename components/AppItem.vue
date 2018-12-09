@@ -37,7 +37,7 @@
   &-thumb
     height: 100%
     width: 100%
-    padding-top: 100%
+    padding-top: aspectRatio(1, 1)
     overflow: hidden
     border-radius: $border-radius
     position: relative
@@ -79,6 +79,9 @@
 
           ~.AppItem-body
             padding: 0.8em 1.6em
+
+        &-body
+          flex: 1 1 0%
 
       &.is-small
         .AppItem

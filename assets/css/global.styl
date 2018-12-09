@@ -18,6 +18,12 @@ unitRes(min, max, screen-min = 320, screen-max = 2560)
   'calc( %s + %s )' % (unit($slope * 100, 'vw') unit($init, 'px'))
 
 /*
+ * aspectRatio Mixin
+ */
+aspectRatio(width, height)
+  (height / width) * 100%
+
+/*
  * @font-face Mixin
  */
 fontFace(font-name, font-src, font-weight = false, font-style = false, formats = eot woff2 woff truetype svg, local-font-name = font-name, svg-font-name = font-name)
