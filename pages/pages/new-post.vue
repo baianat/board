@@ -21,7 +21,7 @@ div
 export default {
   head() {
     return {
-      title: 'Dashboard'
+      title: 'New post'
     }
   },
   data: () => ({
