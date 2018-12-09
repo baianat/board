@@ -5,6 +5,8 @@
 
 
   .TheHeader-actions
+    .TheHeader-icon
+      a(href="https://github.com/baianat/board" target="blank"): AppIcon(name="github")
     AppDropdown.is-large.is-right
       AppIcon(name="notifications" slot="trigger" type="outlined")
       AppList(:items="notificationIcons")
@@ -84,7 +86,7 @@
         fill: $white
         font-size: 24px
 
-    >div
+    >div, >a
       padding: 0 10px
       margin: 0
 </style>
