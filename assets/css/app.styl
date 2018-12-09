@@ -101,13 +101,17 @@ code
       border-width: 0
       font-size: $size-massive
 
+    td
+      border-width: 0
+
   th
     border-width: 0
+    border-top: 1px solid $gray
 
   &.is-clean
     thead
       th
-        border-width: 1px
+        border-bottom: 1px solid $gray
 
 .avatar
   vertical-align: top
@@ -190,4 +194,5 @@ code
         &:before
           content: attr(data-divider)
 
+@import './dark'
 @import './rtl'

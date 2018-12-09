@@ -1,0 +1,202 @@
+$box-shadow = 0px 0px 25.5px 4.5px rgba(255, 255, 255, 0.1)
+$box-shadow2 = 0px 0px 25.5px 4.5px rgba(255, 255, 255, 0.2)
+
+// [dark^='true']
+html
+  body
+    background: $black
+    color: $white
+
+  // Sidebar
+  .TheSidebar
+    &-container, .nav
+      background: $black
+
+    &-container
+      &::-webkit-scrollbar-thumb
+        background-color: alpha($white, 0.1)
+
+  .nav-link, .nav-toggle
+    color: $white
+
+    .icon
+      fill: $white
+
+    &:hover
+      color: $primary
+
+  // AppCard
+  .AppCard
+    background: $black
+    color: $white
+    box-shadow: $box-shadow
+
+    &.is-clean
+      color: $white
+
+    &-title
+      .icon
+        fill: $white
+
+  // AppItem
+  .AppItem
+    background: $black
+    color: $white
+    box-shadow: $box-shadow
+
+    &:hover
+      box-shadow: $box-shadow2
+
+  // Table
+  .table
+    color: $white
+
+    td, th
+      border-color: alpha($white, 0.1)
+
+    &.is-striped tbody tr:nth-of-type(odd)
+      background: alpha($white, 0.1)
+
+    &.is-hoverable tr:hover
+      background: alpha($white, 0.1)
+
+  .vgt-fixed-header
+    background: $black
+
+    thead
+      th
+        background: $black
+
+  .vgt-input, .vgt-select
+    background: $black
+    color: $white
+
+    &:focus
+      border-color: $priamary
+
+    +placeholder()
+      color: $white
+
+  .vgt-wrap__footer .footer__navigation__page-btn
+    color: $white
+
+  .vgt-responsive
+    &::-webkit-scrollbar-thumb
+      background-color: alpha($white, 0.1)
+
+  // Divider
+  .u-divider
+    background: $alpha($white, 0.1)
+
+  // example
+  .example-v-grid
+    background: alpha($white, 0.1)
+
+  // code
+  code
+    background: alpha($white, 0.1)
+
+  // Progress
+  .progress
+    background: alpha($white, 0.1)
+
+    &-icon
+      border-color: $black
+
+  // Tabs
+  .tabs
+    border-color: alpha($white, 0.1)
+
+    a
+      background: $black
+
+    &.is-boxed
+      .is-active a, a:hover
+        border-color: alpha($white, 0.1)
+        border-bottom-color: transparent
+
+  // inputs
+  .input, .textarea, .select
+    background-color: $black
+    color: $white
+
+    +placeholder()
+      color: $white
+
+    &:disabled, &.is-disabled
+      background: alpha($white, 0.1)
+
+  .checkbox-input, .radio-input, input.checkbox, input.radio
+    background: $black
+
+  .select
+    &.is-warning
+      color: $warning
+
+    &.is-light
+      color: $light
+
+    &.is-white
+      color: $white
+
+  // switcher
+  .switcher
+    &-body
+      background: alpha($white, 0.1)
+
+  // vue multiselect
+  .multiselect
+    background: $black
+
+    &__tags
+      background: $black
+      color: $white
+
+    &--disabled
+      .multiselect
+        &__tags
+          background: alpha($white, 0.1)
+
+    &__select
+      &:before, &:after
+        background: $white
+
+    &__input, &__single
+      background: $black
+      color: $white
+
+      +placeholder()
+        color: $white
+
+  // Dropzone
+  .vue-dropzone
+    background: alpha($white, 0.1)
+    border-color: alpha($white, 0.3)
+
+    &:hover
+      background: alpha($white, 0.2)
+
+  // AppIcons
+  .AppIcons
+    &-footer
+      background: $black
+
+    &-item
+      .icon
+        fill: $white
+
+  // .FullPage-card
+  .FullPage-card
+    background: $black
+
+  // Chat
+  .AppChat-messages-item-content >span
+    background: alpha($white, 0.1)
+
+  .AppChat
+    &-users, &-messages
+      &::-webkit-scrollbar-thumb
+        background-color: alpha($white, 0.1)
+
+    &-footer
+      background: alpha($white, 0.1)
