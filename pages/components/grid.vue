@@ -75,7 +75,7 @@ div
           .column
             span.button.is-dark.u-mb-0 Curabitur mattis maximus feugiat.
 
-        p #[code .is-fit]: Removes gutters between columns
+        p.u-mt-large #[code .is-fit]: Removes gutters between columns
         .grid.is-fit.has-space
           .column.is-7
             span.button.is-dark.is-block.u-mb-0 column
@@ -83,7 +83,7 @@ div
             span.button.is-dark.is-block.u-mb-0 column
 
 
-        p #[code .is-vertical]: Arrange columns in a vertical order
+        p.u-mt-large #[code .is-vertical]: Arrange columns in a vertical order
         .grid.is-vertical.has-space
           .column.is-7
             span.button.is-dark.is-block.u-mb-0  is-7
@@ -107,7 +107,7 @@ div
               span.button.is-dark.is-block.u-mb-0 column
             .column
               span.button.is-dark.is-block.u-mb-0 column
-        p #[code .is-middle ] : Align columns to vertically middle of the grid container
+        p.u-mt-large #[code .is-middle ] : Align columns to vertically middle of the grid container
         .example-v-grid
           .grid.is-middle.has-space
             .column
@@ -116,7 +116,7 @@ div
               span.button.is-dark.is-block.u-mb-0 column
             .column
               span.button.is-dark.is-block.u-mb-0 column
-        p #[code .is-bottom ] : Align columns to the middle of the grid container
+        p.u-mt-large #[code .is-bottom ] : Align columns to the middle of the grid container
         .example-v-grid
           .grid.is-bottom.has-space
             .column
