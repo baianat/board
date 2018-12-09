@@ -88,7 +88,18 @@ body
     &-fixed-header
       background: $white
 
+      .table
+        border-radius: 0
+
+      thead
+        th
+          background: $white
+
     &-wrap
+      &__actions
+        &-footer
+          border: 0
+
       &__footer
         border: none
         background: none
@@ -109,3 +120,14 @@ body
               &-count
                 &__label
                   color: $slategray
+
+    &-responsive
+      &::-webkit-scrollbar
+        width: 0.5em
+
+      &::-webkit-scrollbar-track
+        -webkit-box-shadow: none
+
+      &::-webkit-scrollbar-thumb
+        background-color: $light
+        outline: 0 solid $slategray

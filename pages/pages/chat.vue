@@ -59,6 +59,16 @@ div
     overflow-y: auto
     -webkit-overflow-scrolling: touch
 
+    &::-webkit-scrollbar
+      width: 0.5em
+
+    &::-webkit-scrollbar-track
+      -webkit-box-shadow: none
+
+    &::-webkit-scrollbar-thumb
+      background-color: $light
+      outline: 0 solid $slategray
+
     &-item
       display: flex
       margin-bottom: 20px
@@ -127,6 +137,16 @@ div
     flex: 1 1 0%
     height: 50vh
     overflow-y: auto
+
+    &::-webkit-scrollbar
+      width: 0.5em
+
+    &::-webkit-scrollbar-track
+      -webkit-box-shadow: none
+
+    &::-webkit-scrollbar-thumb
+      background-color: $light
+      outline: 0 solid $slategray
 
     &-item
       display: flex
