@@ -82,6 +82,7 @@ export default {
           chart: {
             id: 'areaChart'
           },
+          colors: ['#2451F2', '#36D9B0'],
           dataLabels: {
             enabled: false
           },
@@ -115,6 +116,7 @@ export default {
           chart: {
             id: 'lineChart'
           },
+          colors: ['#2451F2', '#36D9B0'],
           xaxis: {
             type: 'datetime',
             categories: [
@@ -146,6 +148,7 @@ export default {
           chart: {
             id: 'barChart'
           },
+          colors: ['#2451F2'],
           xaxis: {
             categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
           }
@@ -163,6 +166,7 @@ export default {
           chart: {
             id: 'testChart'
           },
+          colors: ['#2451F2', '#36D9B0', '#FFCF0D'],
           plotOptions: {
             bar: {
               horizontal: false,
@@ -230,6 +234,7 @@ export default {
             id: 'mixedChart',
             stacked: false
           },
+          colors: ['#2451F2', '#36D9B0', '#FFCF0D'],
           stroke: {
             width: [0, 2, 5],
             curve: 'smooth'
@@ -313,13 +318,15 @@ export default {
           chart: {
             id: 'donutChart'
           },
-          labels: ['Blue', 'Green', 'Yellow', 'Red']
+          labels: ['Blue', 'Red', 'Green', 'Yellow'],
+          colors: ['#2451F2', '#F2248F', '#36D9B0', '#FFCF0D']
         },
         series: [11, 32, 45, 32]
       },
 
       radialBarChart: {
         options: {
+          colors: ['#2451F2'],
           chart: {
             id: 'radialBarChart'
           },
@@ -333,6 +340,7 @@ export default {
           chart: {
             id: 'bubbleChart'
           },
+          colors: ['#F22435'],
           dataLabels: {
             enabled: false
           },
@@ -393,6 +401,7 @@ export default {
               enabled: false
             }
           },
+          colors: ['#2451F2', '#F2248F', '#36D9B0', '#FFCF0D'],
           xaxis: {
             tickAmount: 10
           },
@@ -517,10 +526,11 @@ export default {
           chart: {
             id: 'heatmapChart'
           },
+
           dataLabels: {
             enabled: false
           },
-          colors: ['#008FFB'],
+          colors: ['#FFCF0D'],
 
           xaxis: {
             type: 'category'
