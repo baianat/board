@@ -57,7 +57,7 @@ module.exports = {
   modules: ['@nuxtjs/style-resources', '@nuxtjs/pwa'],
 
   styleResources: {
-    stylus: ['~assets/css/dir.styl', '~assets/css/global.styl']
+    stylus: ['~assets/css/global.styl']
   },
   /*
   ** Build configuration
