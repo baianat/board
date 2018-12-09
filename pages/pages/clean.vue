@@ -1,24 +1,24 @@
 <template lang="pug">
 div
   h1 Dashboard
-  .grid.is-desktop-4.has-space
-    .column
-      AppCard.is-clean.is-full.is-fit-body.is-light
+  .grid.has-space
+    .column.is-widescreen-4.is-tablet-6
+      AppCard.is-full.is-clean
         template(slot="header")
           h4.AppCard-title  Sales
-          span.u-color-primary $351,612
+          span.u-color-secondary.u-font-bold $351,612
         VueApexCharts(type="area" height="200"  :options="spark4.options"  :series="spark4.series")
-    .column
-      AppCard.is-clean.is-full.is-fit-body.is-light
+    .column.is-widescreen-4.is-tablet-6
+      AppCard.is-full.is-clean
         template(slot="header")
           h4.AppCard-title  Expenses
-          span.u-color-primary $479,652
+          span.u-color-primary.u-font-bold $479,652
         VueApexCharts(type="area" height="200"  :options="spark5.options"  :series="spark5.series")
-    .column
-      AppCard.is-clean.is-full.is-fit-body.is-light
+    .column.is-widescreen-4
+      AppCard.is-full.is-clean
         template(slot="header")
           h4.AppCard-title  Profits
-          span.u-color-primary $964,371
+          span.u-color-success.u-font-bold $964,371
         VueApexCharts(type="area" height="200"  :options="spark6.options"  :series="spark6.series")
 
   .u-mt-normal
@@ -186,6 +186,7 @@ export default {
               enabled: true
             }
           },
+          colors: ['#F2248F'],
           stroke: {
             curve: 'straight'
           },
@@ -199,8 +200,7 @@ export default {
           },
           xaxis: {
             type: 'datetime'
-          },
-          colors: ['#dae4f1']
+          }
         },
         series: [
           {
@@ -219,6 +219,7 @@ export default {
               enabled: true
             }
           },
+          colors: ['#2451F2'],
           stroke: {
             curve: 'straight'
           },
@@ -232,8 +233,7 @@ export default {
           },
           xaxis: {
             type: 'datetime'
-          },
-          colors: ['#dae4f1']
+          }
         },
         series: [
           {
@@ -252,6 +252,7 @@ export default {
               enabled: true
             }
           },
+          colors: ['#36D9B0'],
           stroke: {
             curve: 'straight'
           },
@@ -265,8 +266,7 @@ export default {
           },
           xaxis: {
             type: 'datetime'
-          },
-          colors: ['#36D9B0']
+          }
         },
         series: [
           {
