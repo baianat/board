@@ -68,7 +68,7 @@
     padding-{$dir-start}: 25px
 
     +mq($until: 'desktop')
-      top: 60px
+      top: 50px
 
     &::-webkit-scrollbar
       width: 0.5em
