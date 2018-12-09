@@ -1,6 +1,6 @@
 # board
 
-> A complete admin board template with more than 100 elements and components, based on blexar CSS framework.
+> A complete admin board template with more than 100 elements and components, based on [Blexar](https://github.com/baianat/blexar) CSS framework.
 > Made with [Nuxt.js](https://github.com/nuxt/nuxt.js) + [Vue.js](https://github.com/vuejs/vue).
 
 ## Demo
