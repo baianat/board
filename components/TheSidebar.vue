@@ -143,7 +143,8 @@ export default {
           { title: 'Dropzone', href: '/forms/dropzone' },
           { title: 'Flatpicker', href: '/forms/flatpicker' },
           { title: 'Tiptab Editor', href: '/forms/tiptab-editor' },
-          { title: 'Vue2 Editor', href: '/forms/vue2-editor' }
+          { title: 'Vue2 Editor', href: '/forms/vue2-editor' },
+          { title: 'Guide', href: '/guide' }
         ]
       },
       { icon: 'loyalty', title: 'Icons', href: '/icons' },

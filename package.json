@@ -20,6 +20,7 @@
     "@nuxtjs/pwa": "^2.6.0",
     "@nuxtjs/style-resources": "^0.1.1",
     "apexcharts": "^2.2.4",
+    "driver.js": "^0.8.1",
     "nuxt": "^2.3.1",
     "tiptap": "^0.20.1",
     "tiptap-extensions": "^0.23.0",
