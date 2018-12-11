@@ -54,7 +54,7 @@ import icons from '~/assets/data/icons.json'
 export default {
   head() {
     return {
-      title: 'Dashboard'
+      title: 'Icons'
     }
   },
   data: () => ({
