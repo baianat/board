@@ -129,6 +129,7 @@ html[dark^='true']
   .input, .textarea, .select
     background-color: $black
     color: $white
+    border-color: alpha($white, 0.2)
 
     +placeholder()
       color: $white
@@ -138,6 +139,7 @@ html[dark^='true']
 
   .checkbox-input, .radio-input, input.checkbox, input.radio
     background: $black
+    border-color: alpha($white, 0.2)
 
   .select
     &.is-warning
@@ -161,6 +163,7 @@ html[dark^='true']
     &__tags
       background: $black
       color: $white
+      border-color: alpha($white, 0.2)
 
     &--disabled
       .multiselect
@@ -210,3 +213,15 @@ html[dark^='true']
 
     &-footer
       background: alpha($white, 0.1)
+
+  // Editor
+  .quillWrapper
+    .ql-snow
+      .ql-stroke
+        stroke: rgba(255, 255, 255, 0.3)
+
+      &.ql-toolbar
+        border-color: alpha($white, 0.2)
+
+      &.ql-container
+        border-color: alpha($white, 0.2)
