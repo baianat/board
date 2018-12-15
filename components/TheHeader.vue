@@ -82,7 +82,7 @@
       margin: 0 !important
 
     .dropdown-toggle
-      height: 60px
+      height: 50px
       display: flex
       align-items: center
       cursor: pointer
