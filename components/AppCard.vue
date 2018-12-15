@@ -73,7 +73,7 @@
   &.is-clean
     box-shadow: $boxShadow
     box-shadow: none
-    background: transparent
+    background: transparent !important
     color: $black
 
     .AppCard
