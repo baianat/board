@@ -22,8 +22,6 @@
     "apexcharts": "^3.5.1",
     "driver.js": "^0.9.5",
     "nuxt": "^2.4.5",
-    "tiptap": "^0.20.1",
-    "tiptap-extensions": "^0.23.0",
     "vee-validate": "^2.1.7",
     "vue-apexcharts": "^1.3.0",
     "vue-flatpickr-component": "^8.1.1",

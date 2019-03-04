@@ -43,7 +43,6 @@ module.exports = {
     '~/plugins/vue-multiselect',
     '~/plugins/vee-validate',
     '~/plugins/vue-flatpickr',
-    '~/plugins/tiptab',
     { src: '~/plugins/vue-notification', ssr: false },
     { src: '~/plugins/vue-goodtable', ssr: false },
     { src: '~/plugins/apex-charts', ssr: false },
