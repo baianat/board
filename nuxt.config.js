@@ -43,11 +43,11 @@ module.exports = {
     '~/plugins/vue-multiselect',
     '~/plugins/vee-validate',
     '~/plugins/vue-flatpickr',
-    { src: '~/plugins/vue-notification', ssr: false },
-    { src: '~/plugins/vue-goodtable', ssr: false },
-    { src: '~/plugins/apex-charts', ssr: false },
-    { src: '~/plugins/vue2-editor', ssr: false },
-    { src: '~/plugins/vue2-dropzone', ssr: false }
+    '~/plugins/vue-notification.client',
+    '~/plugins/vue-goodtable.client',
+    '~/plugins/apex-charts.client',
+    '~/plugins/vue2-editor.client',
+    '~/plugins/vue2-dropzone.client'
   ],
 
   /*
