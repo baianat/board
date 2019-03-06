@@ -41,6 +41,8 @@
     .dropdown
       &-menu
         width: 300px
+
+  generateSizes()
 </style>
 
 <script>
