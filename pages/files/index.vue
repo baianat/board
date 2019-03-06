@@ -68,6 +68,13 @@
     template(slot="header")
       h4.AppCard-title #[AppIcon(name="edit")] #[span  Copy 1 item to…]
     .u-full
+      nav(aria-label='breadcrumb' class="u-mb-small")
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='#') Files
+          li.breadcrumb-item
+            a(href='#') Sub folder
+          li.breadcrumb-item.is-active(aria-current='page') Current folder
       ul.files-folders
         li.is-selected
           span
@@ -91,6 +98,13 @@
     template(slot="header")
       h4.AppCard-title #[AppIcon(name="edit")] #[span  Move 1 item to…]
     .u-full
+      nav(aria-label='breadcrumb' class="u-mb-small")
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='#') Files
+          li.breadcrumb-item
+            a(href='#') Sub folder
+          li.breadcrumb-item.is-active(aria-current='page') Current folder
       ul.files-folders
         li.is-selected
           span
