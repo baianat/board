@@ -48,7 +48,7 @@ div
       AppCard.is-full
         template(slot="header")
           h4.AppCard-title Form Validation States
-        form.form
+        form.form.is-fluid
           .field
             label.field-label Input with success
             input.input.is-success(placeholder='Enter username')

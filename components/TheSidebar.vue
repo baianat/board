@@ -175,10 +175,12 @@ export default {
           { title: 'Sign up2', href: '/pages/signup2' },
           { title: 'Welcome', href: '/pages/welcome' },
           { title: 'Chat', href: '/pages/chat' },
-          { title: 'New post', href: '/pages/new-post' }
+          { title: 'New post', href: '/pages/new-post' },
+          { title: 'Download', href: '/files/download' }
         ]
       },
 
+      { icon: 'storage', title: 'Files', href: '/files' },
       { icon: 'settings-button', title: 'Settings', href: '/settings' }
     ]
   }),
