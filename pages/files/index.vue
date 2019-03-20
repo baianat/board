@@ -28,6 +28,7 @@
       :url="file.url"
       @selected="select"
       @rename="rename = true"
+      @edit="edit = true"
       @copy="copy = true"
       @move="move = true"
       @remove="remove = true"
@@ -55,6 +56,26 @@
     template(slot="footer")
       button.button.is-primary Save
       button.button.is-dark.is-outlined(@click="rename = false") Cancel
+
+  AppModal(v-if="edit" @close="edit = false")
+    template(slot="header")
+      h4.AppCard-title #[AppIcon(name="edit")] #[span  Edit]
+    form.form.u-full
+      .field
+        label.field-label Name
+        input.input(type='text' value="Tellus.jpg")
+      .field
+        label.field-label Caption
+        input.input(type='text')
+      .field
+        label.field-label Alt
+        input.input(type='text')
+      .field
+        label.field-label Description
+        input.input(type='text')
+    template(slot="footer")
+      button.button.is-primary Save
+      button.button.is-dark.is-outlined(@click="edit = false") Cancel
 
   AppModal(v-if="remove" @close="remove = false")
     template(slot="header")
@@ -198,6 +219,7 @@ export default {
     selectedItems: [],
     newFolder: false,
     rename: false,
+    edit: false,
     copy: false,
     move: false,
     remove: false,

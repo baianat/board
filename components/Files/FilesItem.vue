@@ -37,6 +37,7 @@
     ul(slot-scope="child")
       li(@click="$emit('share')")   Share
       li(@click="$emit('download')")   Download
+      li(@click="$emit('edit')" v-if="type.startsWith('image')")   Edit
       li(@click="$emit('rename')")   Rename
       li(@click="$emit('move')")   Move
       li(@click="$emit('copy')")  Copy
@@ -49,7 +50,7 @@
   cursor: pointer
   background: $white
   border-radius: ($border-radius * 2)
-  box-shadow: $boxShadow
+  border: 1px solid $gray
   overflow: hidden
   transition: 200ms
   user-select: none
@@ -117,6 +118,7 @@
 
   &.is-selected
     background: alpha($primary, 0.1)
+    border-color: alpha($primary, 0.1)
 </style>
 
 
