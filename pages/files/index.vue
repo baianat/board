@@ -17,7 +17,14 @@
       @remove="remove = true"
      )
 
-  .files-items.u-mt-normal
+  .files-items.u-mt-normal(
+    :class="{ 'is-darg': dragActive }"
+    @dragenter.stop.prevent="dragActive = true"
+    @dragover.stop.prevent="dragActive = true"
+    @dragleave.stop.prevent="dragActive = false"
+    @drop.stop.prevent="dragActive = false; handleDrop($event);"
+  )
+    .files-items-drag(v-if="dragActive"): AppIcon(name="cloud-upload")
     FilesItem(
       v-for="file in files"
       ref="items"
@@ -34,6 +41,11 @@
       @remove="remove = true"
       @share="share = true"
     )
+  .files-uploading
+    AppIcon(name="refresh")
+    span uploading file.jpg - 5 secs left
+    .progress
+      .progress-bar(style='width: 50%;')
 
   AppModal(v-if="newFolder" @close="newFolder = false")
     template(slot="header")
@@ -217,6 +229,7 @@ export default {
   data: () => ({
     files: files,
     selectedItems: [],
+    dragActive: false,
     newFolder: false,
     rename: false,
     edit: false,
@@ -258,6 +271,9 @@ export default {
       }
       this.shareUsers.push(shareInput)
       this.shareInput.push(shareInput)
+    },
+    handleDrop(e) {
+      console.log(e)
     }
   }
 }
@@ -269,6 +285,26 @@ export default {
     display: grid
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr))
     grid-gap: 16px
+    position: relative
+
+    &-drag
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: alpha($primary, 0.1)
+      border-radius: $border-radius
+      z-index: 3
+      border: 2px dashed $primary
+      color: $white
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 200px
+
+      .icon
+        fill: $white
 
   &-folders
     list-style-type: none
@@ -315,4 +351,33 @@ export default {
       display: block
       font-size: 12px
       color: $slategray
+
+  &-uploading
+    position: fixed
+    bottom: 20px
+    left: 50%
+    transform: translateX(-50%)
+    padding: 8px 16px
+    background: $white
+    border: 1px solid $gray
+    border-radius: $border-radius
+
+    .icon
+      font-size: 24px
+      animation: spin 1.2s linear infinite
+
+    .progress
+      height: 2px
+      margin: 0
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
 </style>
