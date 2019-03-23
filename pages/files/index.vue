@@ -41,11 +41,11 @@
       @remove="remove = true"
       @share="share = true"
     )
-  .files-uploading
+  .files-uploading(v-if="uploading")
     AppIcon(name="refresh")
     span uploading file.jpg - 5 secs left
     .progress
-      .progress-bar(style='width: 50%;')
+      .progress-bar(style='width: 0%;' ref="progress")
 
   AppModal(v-if="newFolder" @close="newFolder = false")
     template(slot="header")
@@ -226,6 +226,7 @@ export default {
     FilesItem
   },
   data: () => ({
+    uploading: false,
     files: files,
     selectedItems: [],
     dragActive: false,
@@ -272,7 +273,19 @@ export default {
       this.shareInput.push(shareInput)
     },
     handleDrop(e) {
-      console.log(e)
+      this.uploading = true
+      var elem = this.$refs.progress
+      var width = 1
+      var id = setInterval(frame, 10)
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id)
+          this.uploading = false
+        } else {
+          width++
+          elem.style.width = width + '%'
+        }
+      }
     }
   }
 }
@@ -360,6 +373,7 @@ export default {
     background: $white
     border: 1px solid $gray
     border-radius: $border-radius
+    z-index: 5
 
     .icon
       font-size: 24px
