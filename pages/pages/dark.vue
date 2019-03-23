@@ -128,7 +128,6 @@ div
 
 </template>
 
-
 <script>
 import { getUser } from '~/assets/data/user'
 import colors from '~/assets/data/colors'

@@ -8,10 +8,7 @@ div
       p Lets go to your profile& team set up, it’s two steps and will take arround a minute
       button.button.is-primary Get started
 
-
 </template>
-
-
 
 <script>
 import FullPage from '~/components/FullPage'

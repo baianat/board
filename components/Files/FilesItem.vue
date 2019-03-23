@@ -121,7 +121,6 @@
     border-color: alpha($primary, 0.1)
 </style>
 
-
 <script>
 import FilesContextMenu from '~/components/Files/FilesContextMenu'
 

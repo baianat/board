@@ -16,7 +16,6 @@ div
     button.button.u-mb-0(@click="type = 'filled'" :class="{'is-primary' : type == 'filled'}") #[AppIcon(name="brightness-high")] #[span Filled]
     button.button.u-mb-0(@click="type = 'outlined'" :class="{'is-primary' : type == 'outlined'}") #[AppIcon(name="brightness-low" )]   #[span Outlined]
 
-
 </template>
 
 <style lang="stylus">
@@ -47,7 +46,6 @@ div
       font-size: 24px
       margin-right: 15px
 </style>
-
 
 <script>
 import icons from '~/assets/data/icons.json'

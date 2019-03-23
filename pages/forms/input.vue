@@ -103,11 +103,7 @@ div
             label.field-label File
             input.input(type='file')
 
-
-
-
 </template>
-
 
 <script>
 export default {

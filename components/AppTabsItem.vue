@@ -3,7 +3,6 @@ div(v-if="isActive")
   slot
 </template>
 
-
 <script>
 export default {
   name: 'AppTabsItem',

@@ -325,10 +325,6 @@ div
 
 </template>
 
-<style lang="stylus">
-</style>
-
-
 <script>
 import { getUser } from '~/assets/data/user'
 import colors from '~/assets/data/colors'

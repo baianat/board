@@ -19,7 +19,6 @@ div
 
 </template>
 
-
 <script>
 import FullPage from '~/components/FullPage'
 export default {

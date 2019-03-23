@@ -118,8 +118,6 @@ div
 
 </template>
 
-
-
 <script>
 import colors from '~/assets/data/colors'
 import sizes from '~/assets/data/sizes'

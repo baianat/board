@@ -275,10 +275,7 @@ div
             AppIcon(name="align-right")
             span align right
 
-
 </template>
-
-
 
 <script>
 export default {

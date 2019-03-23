@@ -22,10 +22,7 @@ div
           .field
             button.button#button(@click.prevent) Submit
 
-
-
 </template>
-
 
 <script>
 import Driver from 'driver.js' // import driver.js

@@ -28,13 +28,7 @@ div
         h6.u-mt-normal State Colors
         AppList.is-timeline(:items="notificationThumbsState")
 
-
-
-
-
-
 </template>
-
 
 <script>
 import { getUser } from '~/assets/data/user'

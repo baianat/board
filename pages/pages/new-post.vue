@@ -16,7 +16,6 @@ div
           button.button Publish
 </template>
 
-
 <script>
 export default {
   head() {

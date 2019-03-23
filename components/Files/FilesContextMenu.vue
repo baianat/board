@@ -1,4 +1,3 @@
-
 <template lang="pug">
 .files-contextMenu(v-show="show" :style="style" tabindex="-1" @blur="close" @click="close" @contextmenu.capture.prevent)
   slot(:data="data")
@@ -133,7 +132,6 @@ export default {
 </script>
 
 <style lang="stylus" >
-
 .files-contextMenu
   background: $white
   border-radius: ($border-radius * 2)

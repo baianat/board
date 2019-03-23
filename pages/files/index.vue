@@ -211,7 +211,6 @@
 
 </template>
 
-
 <script>
 import FilesHeader from '~/components/Files/FilesHeader'
 import FilesItem from '~/components/Files/FilesItem'

@@ -41,7 +41,6 @@ div
         VueGoodTable(:columns="basic.columns" :rows="basic.rows" :rtl="true" styleClass="table")
 </template>
 
-
 <script>
 export default {
   head() {
