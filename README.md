@@ -38,3 +38,13 @@ $ npm run generate
 or
 $ yarn run generate
 ```
+
+## For rtl version
+```bash
+Change variable 
+$dir = ltr
+to
+$dir = rtl
+in file /board/assets/css/vars.styl
+```
+
