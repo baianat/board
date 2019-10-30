@@ -29,10 +29,10 @@ html[dark^='true']
   .AppCard
     background: lighten($black, 2%)
     color: $white
-    box-shadow: $box-shadow
+    box-shadow: $boxShadow
 
     &.is-clean
-      color: $white
+      color: $white !important
 
     &-title
       .icon
@@ -42,10 +42,10 @@ html[dark^='true']
   .AppItem
     background: lighten($black, 2%)
     color: $white
-    box-shadow: $box-shadow
+    box-shadow: $boxShadow
 
     &:hover
-      box-shadow: $box-shadow2
+      box-shadow: $boxShadow-2
 
   // Table
   .table
@@ -225,3 +225,7 @@ html[dark^='true']
 
       &.ql-container
         border-color: alpha($white, 0.2)
+
+  .button.is-clean
+    color: $white
+    fill: $white
