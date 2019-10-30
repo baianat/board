@@ -56,8 +56,8 @@
     $text = isLight(color) ? $black : $white
 
     &.is-{color}
-      background: $accent
-      color: $text
+      background: $accent !important
+      color: $text !important
       border-color: alpha($text, 0.1)
 
       .AppCard
