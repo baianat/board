@@ -19,7 +19,7 @@
     "@blexar/framework": "0.0.33",
     "@nuxtjs/pwa": "^3.0.0-beta.19",
     "@nuxtjs/style-resources": "^1.0.0",
-    "apexcharts": "^3.10.1",
+    "apexcharts": "^3.24.0",
     "driver.js": "^0.9.8",
     "nuxt": "^2.10.2",
     "vee-validate": "^2.1.7",
