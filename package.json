@@ -2,12 +2,51 @@
   "name": "board",
   "version": "1.0.0",
   "description": "A complete admin board template with a large variety of elements and components, based on blexar CSS framework.",
+  "keywords": [
+    "blexar",
+    "nuxtjs",
+    "admin",
+    "board"
+  ],
+  "license": "MIT",
   "author": "Baianat",
+  "contributors": [
+    {
+      "name": "CodeIter",
+      "email": "CodeIter@yandex.com",
+      "url": "https://github.com/ccdd13"
+    }
+  ],
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://blockchain.com/btc/payment_request?address=1Nm2q6VjDcabFVhS6HyYdUzUWbUkg1"
+    },
+    {
+      "type": "individual",
+      "url": "https://ccdd13.github.io/crypto-donation"
+    }
+  ],
+  "homepage": "https://github.com/baianat/board#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baianat/board"
+  },
+  "bugs": {
+    "url": "https://github.com/baianat/board/issues",
+    "email": "development@baianat.com"
+  },
   "private": true,
+  "engines": {
+    "node": ">=14.15",
+    "npm": ">=6.14.11",
+    "yarn": ">=1.22.5"
+  },
   "scripts": {
+    "start": "npm i yarn && yarn && yarn && yarn run build && yarn run prod",
+    "prod": "cross-env NODE_ENV=production node server/index.js",
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
@@ -44,6 +83,8 @@
     "pug-plain-loader": "^1.0.0",
     "push-dir": "^0.4.1",
     "stylus": "^0.54.7",
-    "stylus-loader": "^3.0.2"
-  }
+    "stylus-loader": "^3.0.2",
+    "install-peers": "^1.0.3"
+  },
+  "optionalDependencies": {}
 }
