@@ -40,7 +40,7 @@
     "eslint-plugin-prettier": "3.1.1",
     "eslint-plugin-vue": "^5.2.3",
     "prettier": "1.18.2",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "push-dir": "^0.4.1",
     "stylus": "^0.54.7",
